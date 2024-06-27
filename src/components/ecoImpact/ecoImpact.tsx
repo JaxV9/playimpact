@@ -25,49 +25,54 @@ type EcoImpactPropsType = {
 export const EcoImpact = ({ currentPlatformProps }: EcoImpactPropsType) => {
 
     const [timeRange, setTimeRange] = useState<string>("week")
-    const [currentPlatform, setCurrentPlatform] = useState<string>(currentPlatformProps)
     const [consumption, setConsumption] = useState<number>(0)
+    const [dataY, setDataY] = useState<number[]>([])
 
-    const consumptionByDay: object[] = [
+    const consumptionByWeek: any = [
         {
             "day": "monday",
-            "xbox-in-hours": 3,
+            "Xbox": 3,
             "playstation-in-hours": 1
         },
         {
             "day": "tuesday",
-            "xbox-in-hours": 1,
+            "Xbox": 1,
             "playstation-in-hours": 2
         },
         {
             "day": "wednesday",
-            "xbox-in-hours": 6,
+            "Xbox": 6,
             "playstation-in-hours": 0.3
         },
         {
             "day": "thursday",
-            "xbox-in-hours": 3.2,
+            "Xbox": 3.2,
             "playstation-in-hours": 1
         },
         {
             "day": "friday",
-            "xbox-in-hours": 0,
+            "Xbox": 0,
             "playstation-in-hours": 6
         },
         {
             "day": "saturday",
-            "xbox-in-hours": 1,
+            "Xbox": 1,
             "playstation-in-hours": 2
         },
         {
             "day": "sunday",
-            "xbox-in-hours": 3,
+            "Xbox": 3,
             "playstation-in-hours": 3
         },
     ]
 
     //Consommation en Kwh = puissance en watt x temps en heures / 1000
     //Consommation en C02 = Kwh * facteur d'émission en C02 (0,056)
+
+    const convertInKWH = (pw: number, time: number) => {
+        const result = pw * time / 1000
+        return result
+    }
 
     const consumptionByPlatform: object[] = [
         {
@@ -82,15 +87,24 @@ export const EcoImpact = ({ currentPlatformProps }: EcoImpactPropsType) => {
         }
     ]
 
-return (
-    <>
-        <div className="ecoImpactContainer">
-            {
-                timeRange == "week" ?
-                    <ChartComponent />
-                    : null
-            }
-        </div>
-    </>
-)
+    useEffect(() => {
+        if (currentPlatformProps == "Xbox") {
+            setDataY([])
+            consumptionByWeek.forEach((item: any) => {
+                setDataY(prev => [...prev, convertInKWH(180,Number(item.Xbox))])
+            });
+        }
+    }, [currentPlatformProps])
+
+    return (
+        <>
+            <div className="ecoImpactContainer">
+                {
+                    timeRange == "week" ?
+                        <ChartComponent currentLabelXProps={timeRange} dataXProps={dataY} />
+                        : null
+                }
+            </div>
+        </>
+    )
 }

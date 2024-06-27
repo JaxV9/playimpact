@@ -1,19 +1,39 @@
 // components/chart/Chart.js
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { useEffect, useState } from 'react';
 
 // Enregistrer les composants de Chart.js
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-const ChartComponent = () => {
+type ChartComponentPropsType = {
+    currentLabelXProps: string,
+    dataXProps: number[]
+}
 
+const ChartComponent = ({currentLabelXProps, dataXProps}:ChartComponentPropsType) => {
 
+    const [currentLabelX, setCurrentLabelX] = useState<string[]>([])
+
+    const week: string[] = ["Mon", "Tues", "Wed", "Thur", "Frid", "Sat", "Sun"]
+    const month = ["week_1", "week_2", "week_3", "week_4"]
+
+    useEffect(() => {
+        if(currentLabelXProps == "week"){
+            setCurrentLabelX(week)
+        }
+        if(currentLabelXProps == "month"){
+            setCurrentLabelX(month)
+        }
+    },[currentLabelXProps])
+
+    //X
   const data = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+    labels: currentLabelX,
     datasets: [
       {
-        label: 'Sales',
-        data: [12, 19, 3, 5, 2, 3, 7],
+        label: 'Consommation en KWH sur une semaine',
+        data: dataXProps,
         borderColor: 'rgba(75, 192, 192, 1)',
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         fill: true,
