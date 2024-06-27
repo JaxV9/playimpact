@@ -1,6 +1,6 @@
 .navBarContainer {
     width: fit-content;
-    height: fit-content;
+    height: 50px;
     position: fixed;
     padding: 0px 8px;
     left: 50%;
@@ -29,7 +29,6 @@
     width: 42px;
     height: 42px;
     margin: auto;
-    padding: 8px;
     border-radius: 28px;
 }
 
@@ -71,7 +70,7 @@
 .focusAccountNav {
     opacity: 1;
     transition: all ease 0.2s;
-    scale: 1.2;
+    scale: 1.1;
 }
 
 .disabledNab {
