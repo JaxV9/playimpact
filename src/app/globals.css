@@ -1,10 +1,13 @@
 /* pages */
 /* @import url('./login/style.css'); */
+@import url('./challenges/style.css');
+@import url('./rewards/style.css');
 
 
 /* components */
 @import url('../components/popUpLogin/style.css');
 @import url('../components/navbar/style.css');
+@import url('../components/layoutChildren/style.css');
 
 body {
   background-color: #2F2F2F;
