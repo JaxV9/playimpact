@@ -1,0 +1,28 @@
+.navPlateformContainer {
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    border-radius: 16px;
+    background-color: #454545;
+}
+
+.navPlatform {
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 28px;
+    font-size: 14px;
+}
+
+.navPlatformFocus {
+    border-radius: 16px;
+    background: rgb(163,23,205);
+    background: -moz-linear-gradient(90deg, rgba(163,23,205,1) 0%, rgba(0,206,209,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(163,23,205,1) 0%, rgba(0,206,209,1) 100%);
+    background: linear-gradient(90deg, rgba(163,23,205,1) 0%, rgba(0,206,209,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a317cd",endColorstr="#00ced1",GradientType=1);
+}

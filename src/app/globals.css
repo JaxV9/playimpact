@@ -3,6 +3,7 @@
 @import url('./challenges/style.css');
 @import url('./rewards/style.css');
 @import url('./account/style.css');
+@import url('../components/currentGame/style.css');
 
 
 /* components */
@@ -12,6 +13,7 @@
 @import url('../components/ui/carrousel/style.css');
 @import url('../components/ui/separator/style.css');
 @import url('../components/ui/title/style.css');
+@import url('../components/ui/platform/style.css');
 
 body {
   background-color: #282929;
@@ -26,6 +28,17 @@ body {
 
 .catchPhrase {
   width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  margin-top: 28px;
+  margin-top: 16px;
+  color: #A317CD;
+  background-image: -webkit-linear-gradient(0deg, #A317CD 1%, #00CED1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+  font-weight: 500;      
 }
