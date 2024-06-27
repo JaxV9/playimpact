@@ -1,0 +1,32 @@
+.currentGameContainer {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.currentGamePictureContainer {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 16px;
+}
+
+.currentGamePictureContainer > span {
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.currentGamePicture {
+    width: 90%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

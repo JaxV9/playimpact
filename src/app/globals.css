@@ -32,7 +32,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-top: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   color: #A317CD;
   background-image: -webkit-linear-gradient(0deg, #A317CD 1%, #00CED1 100%);
   background-clip: text;
