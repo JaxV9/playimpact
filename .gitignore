@@ -38,11 +38,13 @@ next-env.d.ts
 # local env files
 .env
 
-# Auto Generated PWA files
-**/public/sw.js
-**/public/workbox-*.js# local env files
-.env
+# to avoid caching pwa files
 
-# Auto Generated PWA files
 **/public/sw.js
+**/public/sw.js.map
+
 **/public/workbox-*.js
+**/public/workbox-*.js.map
+
+**/public/worker-*.js
+**/public/worker-*.js.map

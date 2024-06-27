@@ -1,27 +1,32 @@
 {
-    "name": "PlayImpact",
-    "short_name": "PlayI",
-    "theme_color": "#00ff00",
-    "background_color": "#ffffff",
-    "display": "browser",
-    "orientation": "any",
+    "theme_color": "#893DF7",
+    "background_color": "#ffff",
+    "display": "standalone",
     "scope": "/",
     "start_url": "/",
+    "name": "PlayImpact",
+    "short_name": "PlayImpact",
+    "description": "Spithacode is your go-to destination for igniting your coding passion. Explore expert insights, tutorials, and resources in web development. Elevate your profile, share knowledge, and discover new job opportunities in the ever-evolving tech landscape",
     "icons": [
         {
-            "src": "/icons-192.png",
-            "type": "image/png",
-            "sizes": "192x192"
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
         },
         {
-            "src": "/icons-256.png",
-            "type": "image/png",
-            "sizes": "256x256"
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
         },
         {
-            "src": "/icons-512.png",
-            "type": "image/png",
-            "sizes": "512x512"
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ]
 }
