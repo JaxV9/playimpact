@@ -28,6 +28,9 @@ export const Navbar = () => {
                 <Link href="/rewards">
                     <div className={currentPath == "/rewards" ? "rewardsIcon focusNav": "rewardsIcon disabledNab"}></div>
                 </Link>
+                <Link href="/account">
+                    <div  style={{backgroundImage: "url(/assets/VALORANT.jpg"}} className={currentPath == "/account" ? "accountIcon focusAccountNav": "accountIcon disabledNab"}></div>
+                </Link>
             </div>
         </>
     )
