@@ -14,7 +14,7 @@ export const CurrentGame = () => {
                     <span className="currentGameLabel">Défi en cours</span>
                     <Image src="/assets/trophy.png"
                       alt="" />
-                    <div className="currentGameChallenge">Jouez 4h au maximum aujourd'hui</div>
+                    <div className="currentGameChallenge">Jouez 4h au maximum aujourd&apos;hui</div>
                     <div className="progressBarContainer">
                         <div className="progressBar" style={{width: "60%"}}></div>
                     </div>
