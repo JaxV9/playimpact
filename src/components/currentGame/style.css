@@ -34,27 +34,36 @@
 .currentGameChallengeContainer {
     padding-top: 28px;
     position: relative;
+    font-size: 15px;
 }
 
 .currentGameChallengeContainer > img {
-    width: 80%;
+    width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 28px;
+    margin-top: 16px;
 }
 
 .currentGameChallenge {
     width: 95%;
     text-align: center;
-    background: #a317cd64;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border-radius: 8px;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 16px;
+}
 
+.progressBarContainer {
+    width: 100%;
+    height: 12px;
+    background-color: #454545;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.progressBar {
+    height: 12px;
+    background-color: #a317cd;
+    border-radius: 8px;
 }
