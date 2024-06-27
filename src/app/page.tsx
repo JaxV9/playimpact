@@ -8,6 +8,7 @@ import { Title } from "@/components/ui/title/title";
 export default function Home() {
 
   const pictures: string[] = [
+    "horizon.png",
     "eldenring.jpg",
     "finalFantasy.jpg",
     "eldenring.jpg",

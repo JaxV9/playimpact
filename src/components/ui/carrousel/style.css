@@ -3,20 +3,20 @@
     height: 200px;
     margin-left: auto;
     margin-right: auto;
-    display: flex; /* Affiche les éléments en ligne */
-    overflow-x: auto; /* Permet le défilement horizontal si le contenu déborde */
-    scrollbar-width: thin; /* Optionnel: rend la barre de défilement plus fine */
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
     scrollbar-color: #888 #e0e0e0;
     padding-bottom: 16px;
 }
 
 .pictureCarrousel {
-    width: 300px;
+    width: 90%;
     height: auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 8px;
-    flex: 0 0 auto; /* Les éléments ne grandissent pas, ne rétrécissent pas mais conservent leur taille */
+    flex: 0 0 auto;
     margin-right: 16px;
 }
