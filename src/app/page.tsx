@@ -9,8 +9,9 @@ export default function Home() {
 
   const pictures: string[] = [
     "horizon.png",
-    "eldenring.jpg",
-    "finalFantasy.jpg",
+    "zelda.webp",
+    "clove-valorant.webp",
+    "subnautica.jpg",
     "eldenring.jpg",
     "finalFantasy.jpg"
   ]
