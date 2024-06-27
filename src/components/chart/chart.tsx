@@ -8,31 +8,38 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 
 type ChartComponentPropsType = {
     currentLabelXProps: string,
-    dataXProps: number[]
+    dataXProps: number[],
+    currentUnitProps: string
 }
 
-const ChartComponent = ({currentLabelXProps, dataXProps}:ChartComponentPropsType) => {
+const ChartComponent = ({currentLabelXProps, dataXProps, currentUnitProps}:ChartComponentPropsType) => {
 
     const [currentLabelX, setCurrentLabelX] = useState<string[]>([])
+    const [currentTitle, setCurrentTitle] = useState<string>("")
+    const [currentUnit, setCurrentUnit] = useState<string>("")
 
     const week: string[] = ["Mon", "Tues", "Wed", "Thur", "Frid", "Sat", "Sun"]
     const month = ["week_1", "week_2", "week_3", "week_4"]
 
     useEffect(() => {
+        const thisUnit = currentUnitProps == "KWH" ? "KWH" : "C02"
         if(currentLabelXProps == "week"){
             setCurrentLabelX(week)
+            
+            setCurrentTitle("Consommation en "+thisUnit+" sur une semaine")
         }
         if(currentLabelXProps == "month"){
             setCurrentLabelX(month)
+            setCurrentTitle("Consommation en "+thisUnit+" sur un mois")
         }
-    },[currentLabelXProps])
+    },[currentLabelXProps, currentUnitProps])
 
     //X
   const data = {
     labels: currentLabelX,
     datasets: [
       {
-        label: 'Consommation en KWH sur une semaine',
+        label: currentTitle,
         data: dataXProps,
         borderColor: 'rgba(75, 192, 192, 1)',
         backgroundColor: 'rgba(75, 192, 192, 0.2)',

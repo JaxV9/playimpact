@@ -26,7 +26,7 @@ type EcoImpactPropsType = {
 export const EcoImpact = ({ currentPlatformProps }: EcoImpactPropsType) => {
 
     const [timeRange, setTimeRange] = useState<string>("week")
-    const [consumption, setConsumption] = useState<number>(0)
+    const [currentUnit, setCurrentUnit] = useState<string>("KWH")
     const [dataY, setDataY] = useState<number[]>([])
 
     const consumptionByDays: any = [
@@ -93,9 +93,17 @@ export const EcoImpact = ({ currentPlatformProps }: EcoImpactPropsType) => {
     //Consommation en Kwh = puissance en watt x temps en heures / 1000
     //Consommation en C02 = Kwh * facteur d'émission en C02 (0,056)
 
-    const convertInKWH = (pw: number, time: number) => {
-        const result = pw * time / 1000
-        return result
+    const convertIn = (pw: number, time: number) => {
+        if(currentUnit == "KWH"){
+            const resultInKWH = pw * time / 1000
+            return resultInKWH
+        }
+        if(currentUnit == "C02"){
+            const resultInKWH = pw * time / 1000
+            const resultInC02 = resultInKWH * 0.056
+            return resultInC02
+        }
+        return 0
     }
 
     const consumptionByPlatform: object[] = [
@@ -115,47 +123,49 @@ export const EcoImpact = ({ currentPlatformProps }: EcoImpactPropsType) => {
         if (currentPlatformProps == "Xbox" && timeRange == "week") {
             setDataY([])
             consumptionByDays.forEach((item: any) => {
-                setDataY(prev => [...prev, convertInKWH(180, Number(item.Xbox))])
+                setDataY(prev => [...prev, convertIn(180, Number(item.Xbox))])
             });
         }
         if (currentPlatformProps == "Playstation" && timeRange == "week") {
             console.log("hello")
             setDataY([])
             consumptionByDays.forEach((item: any) => {
-                setDataY(prev => [...prev, convertInKWH(180, Number(item.Playstation))])
+                setDataY(prev => [...prev, convertIn(180, Number(item.Playstation))])
             });
             console.log("here" +consumptionByDays[0].Playstation)
         }
         if (currentPlatformProps == "Xbox" && timeRange == "month") {
             setDataY([])
             consumptionByWeeks.forEach((item: any) => {
-                setDataY(prev => [...prev, convertInKWH(180, Number(item.Xbox))])
+                setDataY(prev => [...prev, convertIn(180, Number(item.Xbox))])
             });
         }
         if (currentPlatformProps == "Playstation" && timeRange == "month") {
             setDataY([])
             consumptionByWeeks.forEach((item: any) => {
-                setDataY(prev => [...prev, convertInKWH(180, Number(item.Playstation))])
+                setDataY(prev => [...prev, convertIn(180, Number(item.Playstation))])
             });
         }
-    }, [currentPlatformProps, timeRange])
+    }, [currentPlatformProps, timeRange, currentUnit])
 
     return (
         <>
             <div className="ecoImpactContainer">
                 {
                     timeRange == "week" ?
-                        <ChartComponent currentLabelXProps={timeRange} dataXProps={dataY} />
+                        <ChartComponent currentLabelXProps={timeRange} dataXProps={dataY} currentUnitProps={currentUnit} />
                         : null
                 }
                 {
                     timeRange == "month" ?
-                        <ChartComponent currentLabelXProps={timeRange} dataXProps={dataY} />
+                        <ChartComponent currentLabelXProps={timeRange} dataXProps={dataY} currentUnitProps={currentUnit} />
                         : null
                 }
                 <div className="buttonsContainer">
                     <LoadMoreBtn functionProps={() => setTimeRange("week")} textProps="Semaine" />
                     <LoadMoreBtn functionProps={() => setTimeRange("month")} textProps="Mois" />
+                    <LoadMoreBtn functionProps={() => setCurrentUnit("KWH")} textProps="KWH" />
+                    <LoadMoreBtn functionProps={() => setCurrentUnit("C02")} textProps="C02" />
                 </div>
             </div>
         </>
