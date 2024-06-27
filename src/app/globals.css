@@ -13,4 +13,12 @@ body {
   background-color: #2F2F2F;
   margin: 0;
   font-family: "Inter", sans-serif;
+  color: #efeeee;
+}
+
+.homeContainer {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
 }
