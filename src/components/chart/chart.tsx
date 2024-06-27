@@ -48,7 +48,7 @@ const ChartComponent = ({currentLabelXProps, dataXProps}:ChartComponentPropsType
         position: 'top' as const,
       },
       title: {
-        display: true,
+        display: false,
         text: 'Sales Over Time',
       },
     },
