@@ -1,0 +1,18 @@
+.separatorLeftUI, .separatorRightUI {
+    height: 2px;
+    width: 60%;
+}
+
+
+.separatorLeftUI {
+    background: rgb(27,230,72);
+    background: linear-gradient(90deg, rgba(27,230,72,1) 0%, rgba(163,23,205,1) 100%);
+    margin-top: 8px;
+}
+
+.separatorRightUI {
+    background: rgb(27,230,72);
+    background: linear-gradient(90deg, rgba(27,230,72,1) 0%, rgba(163,23,205,1) 100%);
+    margin-top: 8px;
+    margin-left: auto;
+}
