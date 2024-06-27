@@ -1,31 +1,33 @@
 'use client';
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export const Navbar = () => {
 
-    const [currentPage, setCurrentPage] = useState<string>('')
+    const pathname = usePathname()
 
+    const [currentPath, setCurrentPath] = useState<string>("")
 
     useEffect(() => {
-        const url = window.location.pathname;
-        //setCurrentPage(url);
-        console.log(url)
-    }, [])
+        setCurrentPath(pathname)
+    }, [pathname])
+
+
 
     return(
         <>
             <div className="navBarContainer">
-                    <Link href="">
-                        <div className="homeIcon"></div>
-                    </Link>
-                    <Link href="challenges">
-                        <div className="challengesIcon"></div>
-                    </Link>
-                    <Link href="rewards">
-                        <div className="rewardsIcon"></div>
-                    </Link>
+                <Link href="/">
+                    <div className={currentPath == "/" ? "homeIcon focusNav": "homeIcon disabledNab"}></div>
+                </Link>
+                <Link href="/challenges">
+                    <div className={currentPath == "/challenges" ? "challengesIcon focusNav": "challengesIcon disabledNab"}></div>
+                </Link>
+                <Link href="/rewards">
+                    <div className={currentPath == "/rewards" ? "rewardsIcon focusNav": "rewardsIcon disabledNab"}></div>
+                </Link>
             </div>
         </>
     )
