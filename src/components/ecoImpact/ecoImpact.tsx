@@ -153,8 +153,10 @@ export const EcoImpact = ({ currentPlatformProps }: EcoImpactPropsType) => {
                         <ChartComponent currentLabelXProps={timeRange} dataXProps={dataY} />
                         : null
                 }
-                <LoadMoreBtn functionProps={() => setTimeRange("week")} textProps="Semaine" />
-                <LoadMoreBtn functionProps={() => setTimeRange("month")} textProps="Mois" />
+                <div className="buttonsContainer">
+                    <LoadMoreBtn functionProps={() => setTimeRange("week")} textProps="Semaine" />
+                    <LoadMoreBtn functionProps={() => setTimeRange("month")} textProps="Mois" />
+                </div>
             </div>
         </>
     )

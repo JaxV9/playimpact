@@ -16,6 +16,7 @@
 @import url('../components/ui/platform/style.css');
 @import url('../components/ui/secondTitle/style.css');
 @import url('../components/ecoImpact/style.css');
+@import url('../components/ui/buttons/loadMoreBtn/style.css');
 
 body {
   background-color: #282929;

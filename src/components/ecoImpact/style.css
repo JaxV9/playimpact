@@ -4,3 +4,12 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.buttonsContainer {
+    display: flex;
+    margin-top: 16px;
+}
+
+.buttonsContainer > button {
+    margin: auto;
+}
