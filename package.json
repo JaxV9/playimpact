@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "-": "^0.0.1",
+    "chart.js": "^4.4.3",
     "next": "14.2.4",
     "next-pwa": "^5.6.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18",
+    "save": "^2.9.0"
   },
   "devDependencies": {
     "@types/node": "^20",

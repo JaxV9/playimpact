@@ -3,7 +3,8 @@
     margin-left: auto;
     margin-right: auto;
     height: fit-content;
-    margin-top: 16px;
+    margin-top: 28px;
+    margin-bottom: 28px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -38,7 +39,7 @@
 }
 
 .currentGameChallengeContainer > img {
-    width: 50%;
+    width: 42%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -54,12 +55,19 @@
     margin-top: 16px;
 }
 
+.labelAndProgressBarContainer {
+    margin-top: 8px;
+}
+
+.labelAndProgressBarContainer > span {
+
+}
+
 .progressBarContainer {
     width: 100%;
     height: 12px;
     background-color: #454545;
     border-radius: 8px;
-    margin-top: 8px;
 }
 
 .progressBar {

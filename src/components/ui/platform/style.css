@@ -1,9 +1,9 @@
 .navPlateformContainer {
-    width: fit-content;
+    width: 85%;
     height: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 28px;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8px;

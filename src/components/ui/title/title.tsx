@@ -1,10 +1,10 @@
 
-type TitleProps = {
+type TitleTypeProps = {
     titleProps: string
 }
 
 
-export const Title = ({titleProps}: TitleProps) => {
+export const Title = ({titleProps}: TitleTypeProps) => {
 
     return(
         <>

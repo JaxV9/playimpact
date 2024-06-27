@@ -1,10 +1,11 @@
 'use client';
 
 import { CurrentGame } from "@/components/currentGame/currentGame";
+import { EcoImpact } from "@/components/ecoImpact/ecoImpact";
 import { Carrousel } from "@/components/ui/carrousel/carrousel";
 import { Platform } from "@/components/ui/platform/platform";
 import { Title } from "@/components/ui/title/title";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
@@ -23,11 +24,13 @@ export default function Home() {
   return (
     <main>
       <div className="homeContainer">
-        <Title titleProps={"Votre bibliothèque"} />
+      {/* <p className="catchPhrase">Le jeu responsable commence ici</p> */}
+        <Title titleProps="Votre bibliothèque" />
         <Carrousel picturesProps={pictures} />
-        <p className="catchPhrase">Le jeu responsable commence ici</p>
         <Platform currentPlatformProps={currentPlatform} setCurrentPlatformProps={setCurrentPlatform} />
         <CurrentGame />
+        <Title titleProps="Impact environnemental" />
+        <EcoImpact currentPlatformProps={currentPlatform}/>
       </div>
     </main>
   );
