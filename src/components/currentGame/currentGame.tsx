@@ -1,4 +1,4 @@
-
+import Image from 'next/image';
 
 export const CurrentGame = () => {
 
@@ -12,7 +12,8 @@ export const CurrentGame = () => {
                 </div>
                 <div className="currentGameChallengeContainer">
                     <span className="currentGameLabel">Défi en cours</span>
-                    <img src="/assets/trophy.png" />
+                    <Image src="/assets/trophy.png"
+                      alt="" />
                     <div className="currentGameChallenge">Jouez 4h au maximum aujourd'hui</div>
                     <div className="progressBarContainer">
                         <div className="progressBar" style={{width: "60%"}}></div>
