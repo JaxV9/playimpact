@@ -10,7 +10,7 @@
 @import url('../components/layoutChildren/style.css');
 @import url('../components/ui/carrousel/style.css');
 @import url('../components/ui/separator/style.css');
-
+@import url('../components/ui/title/style.css');
 
 body {
   background-color: #282929;

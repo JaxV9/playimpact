@@ -2,6 +2,7 @@
 
 import { Carrousel } from "@/components/ui/carrousel/carrousel";
 import { Separator } from "@/components/ui/separator/separator";
+import { Title } from "@/components/ui/title/title";
 
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
   return (
     <main>
       <div className="homeContainer">
-        <h1>Tableau de bord</h1>
+        <Title titleProps={"Votre bibliothèque"} />
         <Carrousel picturesProps={pictures} />
         <p className="catchPhrase">Le jeu responsable commence ici</p>
         <Separator />

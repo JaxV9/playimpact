@@ -1,12 +1,14 @@
 'use client';
 
+import { Title } from "@/components/ui/title/title";
+
 
 const Rewards = () => {
 
     return(
         <>
             <div className="rewardsContainer">
-                <h1>Récompenses</h1>
+                <Title titleProps={"Récompenses"} />
             </div>
         </>
     )
