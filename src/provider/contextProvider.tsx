@@ -1,16 +1,14 @@
 'use client';
-
+import { ReactNode, useContext, useEffect, useState } from "react";
+import React from "react";
+import Head from 'next/head';
 import WalletContext from "@/contexts/walletContext";
-import { ReactNode, useEffect, useState } from "react";
-import { Wallet } from "../wallet/wallet";
-import { Navbar } from "../navbar/navbar";
 
-type LayoutChildrenPropsType = {
+type ContextProviderPropsType = {
     children: ReactNode
 }
 
-
-export const LayoutChildren = ({ children }: LayoutChildrenPropsType) => {
+export const ContextProvider = ({ children }: ContextProviderPropsType) => {
 
     const [walletValue, setWalletValue] = useState<number>(0);
 
@@ -21,12 +19,12 @@ export const LayoutChildren = ({ children }: LayoutChildrenPropsType) => {
         }
     }, []);
 
+
     return (
         <>
+
             <WalletContext.Provider value={{ walletValue, setWalletValue }}>
-                <Wallet />
-                {children}
-                <Navbar />
+                    {children}
             </WalletContext.Provider>
         </>
     )

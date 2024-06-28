@@ -21,6 +21,7 @@
 @import url('../components/challengesList/style.css');
 @import url('../components/ui/popUp/style.css');
 @import url('../components/wallet/style.css');
+@import url('../components/optimisation/style.css');
 
 body {
   background-color: #282929;
@@ -45,4 +46,8 @@ body {
   -webkit-text-fill-color: transparent;
   font-size: 22px;
   font-weight: 500;      
+}
+
+.homeContainer {
+  margin-bottom: 150px;
 }

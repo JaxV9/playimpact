@@ -2,6 +2,7 @@
 
 import { CurrentGame } from "@/components/currentGame/currentGame";
 import { EcoImpact } from "@/components/ecoImpact/ecoImpact";
+import { Optimisation } from "@/components/optimisation/optimisation";
 import { Carrousel } from "@/components/ui/carrousel/carrousel";
 import { Platform } from "@/components/ui/platform/platform";
 import { Title } from "@/components/ui/title/title";
@@ -31,6 +32,8 @@ export default function Home() {
         <CurrentGame />
         <Title titleProps="Impact environnemental" />
         <EcoImpact currentPlatformProps={currentPlatform}/>
+        <Title titleProps="Conseils pour mieux consommer" />
+        <Optimisation />
       </div>
     </main>
   );
