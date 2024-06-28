@@ -9,7 +9,7 @@ export const ChallengesList = () => {
                     <div className="challengeContentContainer">
                         <div className="challenge">
                             <div className="challengePictureContainer">
-                                <div className="challengePicture" style={{ backgroundImage: "url(/assets/reconditionné.png" }}>
+                                <div className="challengePicture" style={{ backgroundImage: "url(/assets/reconditionne.png" }}>
                                 </div>
                                 <div className="tagDifficulty">Facile</div>
                             </div>
