@@ -19,6 +19,7 @@
 @import url('../components/ui/buttons/loadMoreBtn/style.css');
 @import url('../components/currentGame/style.css');
 @import url('../components/challengesList/style.css');
+@import url('../components/ui/popUp/style.css');
 
 body {
   background-color: #282929;

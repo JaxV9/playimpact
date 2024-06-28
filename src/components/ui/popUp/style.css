@@ -1,0 +1,47 @@
+.popUpContainer, .popUpContainerFadeOut {
+    width: 250px;
+    height: fit-content;
+    padding: 12px 32px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+    text-align: center;
+}
+
+.popUpContainer {
+    animation: fadeIn 0.2s ease-in;
+}
+
+.popUpContainerFadeOut {
+    opacity: 0;
+    transition: all ease 1s;
+    animation: fadeOut 0.2s ease-in;
+}
+
+.popUpContainer > p, .popUpContainerFadeOut > p {
+    font-size: 18px;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

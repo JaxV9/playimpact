@@ -1,9 +1,20 @@
+import { useState } from "react"
+import { Popup } from "../ui/popUp/popup"
 
 
 export const ChallengesList = () => {
 
+    const [isPopUp, setIsPopUp] = useState<boolean>(false)
+    const [message, setMessage] = useState<string>("Félicitation ! Vous avez gagné 200 points !")
+
+
     return (
         <>
+            {
+                isPopUp ?
+                    <Popup messageProps={message} isEnabledProps={isPopUp} setIsEnabledProps={setIsPopUp} />
+                    : null
+            }
             <div className="challengesListContainer">
                 <div className="challengeContainer">
                     <div className="challengeContentContainer">
@@ -23,6 +34,7 @@ export const ChallengesList = () => {
                         </div>
                         <span className="challengeLabel">Soumettez une photo de l&apos;appareil avec le reçu ou la confirmation d&apos;achat de la plateforme de reconditionnement.
                         </span>
+                        <button onClick={() => { setIsPopUp(!isPopUp) }} className="getRewardChallenge">Réclamer récompense</button>
                     </div>
                 </div>
                 <div className="challengeContainer">
@@ -44,6 +56,7 @@ export const ChallengesList = () => {
                         <span className="challengeLabel">
                             Soumettez une photo des articles déposés au centre de recyclage avec une attestation ou un reçu du centre.
                         </span>
+                        <button onClick={() => { setIsPopUp(!isPopUp) }} className="getRewardChallenge">Réclamer récompense</button>
                     </div>
                 </div>
                 <div className="challengeContainer">
@@ -65,6 +78,7 @@ export const ChallengesList = () => {
                         <span className="challengeLabel">
                             Soumettez des photos avant et après du matériel nettoyé et entretenu, accompagnées d&apos;une courte description de ce qui a été fait sur Instagram.
                         </span>
+                        <button onClick={() => { setIsPopUp(!isPopUp) }} className="getRewardChallenge">Réclamer récompense</button>
                     </div>
                 </div>
                 <div className="challengeContainer">
@@ -86,6 +100,7 @@ export const ChallengesList = () => {
                         <span className="challengeLabel">
                             Scannez le QR code auprès des bénévoles de l&apos;association pour confirmer votre action.
                         </span>
+                        <button onClick={() => { setIsPopUp(!isPopUp) }} className="getRewardChallenge">Réclamer récompense</button>
                     </div>
                 </div>
                 <div className="challengeContainer">
@@ -107,6 +122,7 @@ export const ChallengesList = () => {
                         <span className="challengeLabel">
                             Scannez le QR code auprès des bénévoles de l&apos;association pour confirmer votre action.
                         </span>
+                        <button onClick={() => { setIsPopUp(!isPopUp) }} className="getRewardChallenge">Réclamer récompense</button>
                     </div>
                 </div>
             </div>
