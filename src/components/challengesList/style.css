@@ -12,8 +12,9 @@
 .challengeContainer {
     width: 100%;
     height: fit-content;
-    min-height: 200px;
     background-color: #373737;
+    padding-top: 8px;
+    padding-bottom: 8px;
     border-radius: 8px;
     display: flex;
 }
@@ -22,6 +23,7 @@
     width: 95%;
     height: 95%;
     margin: auto;
+
 }
 
 .tagDifficulty {
@@ -32,6 +34,8 @@
     border-radius: 16px;
     background: rgb(163, 23, 205);
     background: linear-gradient(90deg, rgba(163, 23, 205, 1) 0%, rgba(0, 206, 209, 1) 100%);
+    bottom: 0;
+    font-size: 14px;
 }
 
 .challengeLabel {
@@ -41,7 +45,6 @@
     width: 100%;
     display: block;
     margin-top: 8px;
-    margin-bottom: 8px;
 }
 
 .challenge {
@@ -52,21 +55,30 @@
     margin-bottom: 16px;
 }
 
+.challengePictureContainer {
+    position: relative;
+    display: grid;
+    gap: 8px;
+}
+
 .challengePicture {
-    width: 100%;
-    height: 100%;
-    background-color: blue;
-    border-radius: 8px;
+    width: 72px;
+    height: 72px;
     margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .thisChallengeContainer {
-    text-align: center;
     font-size: 14px;
     width: 100%;
     display: block;
     margin-top: 8px;
     margin: auto;
+    position: relative;
+    display: grid;
+    grid-gap: 8px;
 }
 
 .progressBarContainerChallenge {
@@ -82,4 +94,12 @@
     height: 12px;
     background-color: #a317cd;
     border-radius: 8px;
+}
+
+.labelProgressBar {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: end; 
 }
