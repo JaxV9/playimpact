@@ -1,5 +1,6 @@
 'use client';
 
+import { ChallengesList } from "@/components/challengesList/challengesList";
 import { Title } from "@/components/ui/title/title";
 
 
@@ -9,6 +10,7 @@ const Challenges = () => {
         <>
             <div className="challengesContainer">
                 <Title titleProps={"Challenges"} />
+                <ChallengesList />
             </div>
         </>
     )

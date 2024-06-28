@@ -3,7 +3,7 @@
 @import url('./challenges/style.css');
 @import url('./rewards/style.css');
 @import url('./account/style.css');
-@import url('../components/currentGame/style.css');
+
 
 
 /* components */
@@ -17,6 +17,8 @@
 @import url('../components/ui/secondTitle/style.css');
 @import url('../components/ecoImpact/style.css');
 @import url('../components/ui/buttons/loadMoreBtn/style.css');
+@import url('../components/currentGame/style.css');
+@import url('../components/challengesList/style.css');
 
 body {
   background-color: #282929;
