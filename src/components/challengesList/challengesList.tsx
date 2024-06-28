@@ -35,7 +35,7 @@ export const ChallengesList = () => {
                                 <div className="tagDifficulty">2de life</div>
                             </div>
                             <div className="thisChallengeContainer">
-                                <span className="descrChallenge">Achetez un appareil électronique reconditionné - 200 points</span>
+                                <span className="descrChallenge">Achetez un appareil électronique reconditionné - <strong>200 points</strong></span>
                                 <span className="labelProgressBar">0%</span>
                                 <div className="progressBarContainerChallenge">
                                     <div className="progressBarChallenge" style={{ width: "0%" }}></div>
@@ -56,7 +56,7 @@ export const ChallengesList = () => {
                                 <div className="tagDifficulty">2de life</div>
                             </div>
                             <div className="thisChallengeContainer">
-                                <span className="descrChallenge">Revendez trois jeux vidéo - 300 points</span>
+                                <span className="descrChallenge">Revendez trois jeux vidéo - <strong>300 points</strong></span>
                                 <span className="labelProgressBar">66%</span>
                                 <div className="progressBarContainerChallenge">
                                     <div className="progressBarChallenge" style={{ width: "60%" }}></div>
@@ -78,7 +78,7 @@ export const ChallengesList = () => {
                                 <div className="tagDifficulty">2de life</div>
                             </div>
                             <div className="thisChallengeContainer">
-                                <span className="descrChallenge">Effectuez un nettoyage complet et un entretien de votre matériel de jeu (console, PC, manette, etc.) pour prolonger sa durée de vie et améliorer son efficacité. - 200 points</span>
+                                <span className="descrChallenge">Effectuez un nettoyage complet et un entretien de votre matériel de jeu (console, PC, manette, etc.) pour prolonger sa durée de vie et améliorer son efficacité. -<strong>200 points</strong></span>
                                 <span className="labelProgressBar">100%</span>
                                 <div className="progressBarContainerChallenge">
                                     <div className="progressBarChallenge" style={{ width: "100%" }}></div>
@@ -100,7 +100,7 @@ export const ChallengesList = () => {
                                 <div className="tagDifficulty">Asso</div>
                             </div>
                             <div className="thisChallengeContainer">
-                                <span className="descrChallenge">Nettoyez une plage avec l&apos;association INITIATIVES OCÉANES. - 500 points</span>
+                                <span className="descrChallenge">Nettoyez une plage avec l&apos;association INITIATIVES OCÉANES. - <strong>500 points</strong></span>
                                 <span className="labelProgressBar">0%</span>
                                 <div className="progressBarContainerChallenge">
                                     <div className="progressBarChallenge" style={{ width: "0%" }}></div>
@@ -122,7 +122,7 @@ export const ChallengesList = () => {
                                 <div className="tagDifficulty">Asso</div>
                             </div>
                             <div className="thisChallengeContainer">
-                                <span className="descrChallenge">Faire du bénévolat auprès de la Croix Rouge / les Restos du Coeur. - 500 points</span>
+                                <span className="descrChallenge">Faire du bénévolat auprès de la Croix Rouge / les Restos du Coeur. - <strong>500 points</strong></span>
                                 <span className="labelProgressBar">0%</span>
                                 <div className="progressBarContainerChallenge">
                                     <div className="progressBarChallenge" style={{ width: "0%" }}></div>
@@ -144,7 +144,7 @@ export const ChallengesList = () => {
                                 <div className="tagDifficulty">Promo</div>
                             </div>
                             <div className="thisChallengeContainer">
-                                <span className="descrChallenge">Promouvoir 3 de vos actions sur Instagram. - 200 points</span>
+                                <span className="descrChallenge">Promouvoir 3 de vos actions sur Instagram. - <strong>200 points</strong></span>
                                 <span className="labelProgressBar">33%</span>
                                 <div className="progressBarContainerChallenge">
                                     <div className="progressBarChallenge" style={{ width: "33%" }}></div>

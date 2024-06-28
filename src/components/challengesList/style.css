@@ -30,10 +30,13 @@
 
 .tagDifficulty {
     width: fit-content;
+    min-width: 50px;
+    text-align: center;
+    height: -moz-fit-content;
     height: fit-content;
     margin-left: auto;
     margin-right: auto;
-    padding: 4px 28px;
+    padding: 4px 8px;
     border-radius: 16px;
     background: rgb(163, 23, 205);
     background: linear-gradient(90deg, rgba(163, 23, 205, 1) 0%, rgba(0, 206, 209, 1) 100%);
