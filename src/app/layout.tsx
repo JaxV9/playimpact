@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar/navbar";
+import { Wallet } from "@/components/wallet/wallet";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         <link rel="icon" href="/icons/icon-192x192.png" />
       </head>
       <body className={inter.className}>
+        <Wallet />
         {children}
         <Navbar />
       </body>

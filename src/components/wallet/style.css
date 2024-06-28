@@ -1,0 +1,23 @@
+.walletContainer {
+    width: 100px;
+    height: fit-content;
+    padding: 8px 0px;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-top: 16px;
+    margin-right: 16px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 8px;
+}
+
+.walletIcon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/assets/wallet.png');
+}
+
+.walletValue {
+    width: 100%;
+}

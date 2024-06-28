@@ -20,16 +20,13 @@
 @import url('../components/currentGame/style.css');
 @import url('../components/challengesList/style.css');
 @import url('../components/ui/popUp/style.css');
+@import url('../components/wallet/style.css');
 
 body {
   background-color: #282929;
   margin: 0;
   font-family: "Inter", sans-serif;
   color: #efeeee;
-}
-
-.homeContainer {
-  margin-top: 28px;
 }
 
 .catchPhrase {
